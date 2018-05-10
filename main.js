@@ -11,4 +11,7 @@ wss.on('connection',function(ws) {
   ws.on('close',function(data) {
   console.log("closed connection :",ws.id);    
   })
+  ws.on('message', function incoming(data) {
+    console.log('message : ',data);
+  });
 })
